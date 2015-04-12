@@ -1,0 +1,97 @@
+.side{
+	width: 200px;
+	float: left;
+	border: 1px solid  #ddd;
+		border-top-right-radius:6px;
+
+}
+.booking_r{
+	border: 1px solid;
+	float: right;
+	width: 814px;
+}
+.booking_content{
+	margin: 10px auto;
+}
+.booking_step{
+	height: 100px;
+	border-bottom: 1px solid;
+}
+.form_title{
+	font-size: 14px;
+	color: #9d9d9d;
+	float: left;
+	width: 120px;
+	text-align: right;
+}
+.form_field{
+	margin-left: 20px;
+}
+.form_item{
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.input-text, .normal{
+	width: 300px;
+	height: 25px;
+	margin-left: 20px;
+}
+.form_select{
+	width: 200px;
+	margin-left: 20px;
+	height: 25px;
+	padding: 2px 2px 2px 5px;
+}
+em{
+	color: red;
+}
+
+.detail{
+	height: 34px;
+	line-height: 34px;
+	font-weight: bold;
+	color: #f9fafa;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	background-color: #04a0be;
+}
+.text_long{
+	width: 70%;
+	height: 160px;
+	resize:none;
+}
+.button_area{
+	padding-left: 600px;
+	margin-top: 20px;
+}
+.item  li{
+	border-bottom: 1px solid  #ddd;
+		height: 30px;
+	word-wrap:break-word;
+}
+.item  li a{
+	font-size: 13px;
+	font-family:'微软雅黑';
+	color: #246bb3;
+	display:block;
+	padding: 0 10px 0 15px;
+	height: 30px;
+	line-height: 30px;
+}
+.item ul{
+	background: #FAF8F8;
+}
+.item li a:hover{
+	color: #333;
+	background-color: #a0ebf9;
+}
+.navigation_left{
+	height: 34px;
+	line-height: 34px;
+	font-weight: bold;
+	color: #f9fafa;
+	padding-left: 10px;
+	background-color: #04a0be;
+	border-top-right-radius:6px;
+}

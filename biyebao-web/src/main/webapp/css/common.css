@@ -1,0 +1,45 @@
+.common_content{
+		margin: 10px auto;
+}
+.navigation_left{
+	height: 34px;
+	line-height: 34px;
+	font-weight: bold;
+	color: #f9fafa;
+	padding-left: 10px;
+	background-color: #04a0be;
+	border-top-right-radius:6px;
+}
+.side{
+	width: 200px;
+	float: left;
+	border: 1px solid  #ddd;
+		border-top-right-radius:6px;
+
+}
+.side .item li{
+	border-bottom: 1px solid  #ddd;
+		height: 30px;
+	word-wrap:break-word;
+}
+.side .item li a{
+	font-size: 13px;
+	font-family:'微软雅黑';
+	color: #246bb3;
+	display:block;
+	padding: 0 10px 0 15px;
+	height: 30px;
+	line-height: 30px;
+}
+.side .item ul{
+	background: #FAF8F8;
+}
+.side .item li a:hover{
+	color: #333;
+	background-color: #a0ebf9;
+}
+.content_r{
+	border: 1px solid;
+	float: right;
+	width: 814px;
+}

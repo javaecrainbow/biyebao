@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+  <toolbox>
+    <tool>
+       <key>date</key>
+       <scope>application</scope>
+       <class>org.apache.velocity.tools.generic.DateTool</class>
+    </tool>
+    <tool>
+       <key>strTool</key>
+       <scope>request</scope>
+       <class>com.rose4j.biyebao.web.velocity.StringTool</class>
+    </tool>
+    <tool>
+       <key>collectionTool</key>
+       <scope>request</scope>
+       <class>com.rose4j.biyebao.web.velocity.CollectionTool</class>
+    </tool>
+    <tool>
+       <key>linkTool</key>
+       <scope>request</scope>
+       <class>com.rose4j.biyebao.web.velocity.LinkTools</class>
+    </tool>
+    <data type="number">
+       <key>luckynumber</key>
+       <value>1.37</value>
+    </data>
+    <data type="string">
+       <key>greeting</key>
+       <value>Hello World!</value>
+    </data>
+    <xhtml>true</xhtml>
+  </toolbox>

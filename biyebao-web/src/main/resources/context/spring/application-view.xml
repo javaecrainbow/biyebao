@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.2.xsd       
+      http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.2.xsd           
+      http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx-3.2.xsd       
+      http://www.springframework.org/schema/aop  http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+      http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+      ">
+						 
+
+	<bean id="configurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath*:/context/properties/conf-sys.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 如果配置成context @controller的requestMapping注册不了 -->
+	<!-- 
+	<context:annotation-config/>
+	 -->
+	<mvc:annotation-driven/>
+		<context:component-scan base-package="com.rose4j.biyebao.web.controller"/>
+	<bean id="exceptionResolver" class="com.rose4j.biyebao.web.filter.HandlerAllExceptionResolver"></bean>
+	
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="webBindingInitializer">
+			<bean class="com.rose4j.biyebao.web.bind.CustomWebBindingInitializer"></bean>
+		</property>
+		<property name="messageConverters">
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+			<property name="supportedMediaTypes" value="text/plain;charset=UTF-8"/>
+			</bean>
+		</property>
+	</bean>
+	<!-- 配置静态资源，直接映射到对应的文件夹，不被DispatcherServlet处理，3.04新增功能，需要重新设置spring-mvc-3.0.xsd -->
+	<mvc:default-servlet-handler/>
+	<!-- velocity support -->
+	<bean class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="/WEB-INF/velocity/"/>
+		<property name="configLocation" value="classpath:/context/velocity/velocity-dev.properties"></property>
+		 <property name="velocityProperties">    
+         <props>    
+             <prop  key="input.encoding">UTF-8</prop>    
+             <prop  key="output.encoding">UTF-8</prop>      
+          </props>    
+      </property>          
+	</bean>
+	<!-- view resolver velocity layout support -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+	<property name="defaultContentType" value="text/html"/>
+	<property name="ignoreAcceptHeader" value="true"/>
+	<property name="mediaTypes">
+		<map>
+		       <entry key="html" value="text/html" />  
+                <entry key="json" value="application/json" />  
+                <entry key="xml" value="application/xml" />  
+                <entry key="excel" value="application/excel" />  
+                <entry key="pdf" value="application/pdf" />  
+		</map>
+	</property>
+	<property name="viewResolvers">
+		<list>
+			<bean class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+			<property name="contentType" value="text/html;charset=UTF-8"/>
+			<property name="suffix" value=".vm"/>
+			<property name="layoutUrl" value="common/layout.vm"></property>
+			<property name="toolboxConfigLocation" value="WEB-INF/velocity/velocity-tools.xml"/>
+			<property name="viewClass" value="org.springframework.web.servlet.view.velocity.VelocityLayoutView"/>
+			</bean>
+		</list>
+	
+	</property>
+	<property name="defaultViews">
+		<list>
+		<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+		<property name="prefixJson" value="false"></property>
+		</bean>
+		</list>
+	</property>
+	</bean>
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+
+</beans>
+
+

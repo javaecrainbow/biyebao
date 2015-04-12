@@ -1,0 +1,187 @@
+#set($title="毕业宝|毕业神器|代做毕业设计-诚信100%包过 QQ:1841569470 代做毕设、计算机毕业设计")
+#define($meta)
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="毕业宝为您提供一流的asp.net代做毕业设计,jsp/java毕业设计代做,php毕业设计代做,安桌代毕业设计做服务,按需制作,按要求验收,一流的软件开发工程师,100%质量保证." />
+<meta name="Keywords" content="毕业设计,毕业设计代做,代做毕业设计,asp.net毕业设计代做,jsp/java代做毕业设计,代做php毕业设计,代做安卓毕业设计" />
+#end
+#define($css)
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<link href="../css/slideshow_buttontitle.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+/* flexslider */
+.publicize_l{position:relative;height:400px;overflow:hidden;background:url(../images/loading.gif) 50% no-repeat;}
+.slides{position:relative;z-index:1;}
+.slides li{height:400px;}
+.flex-control-nav{position:absolute;bottom:14px;z-index:2;width:100%;text-align:center;}
+.flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
+.flex-control-nav a{display:inline-block;width:14px;height:14px;line-height:40px;overflow:hidden;background:url(../images/dot.png) right 0 no-repeat;cursor:pointer;}
+.flex-control-nav .flex-active{background-position:0 0;}
+
+.flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+.flex-direction-nav li a{display:block;width:50px;height:50px;overflow:hidden;cursor:pointer;position:absolute;}
+/*
+.flex-direction-nav li a.flex-prev{left:40px;background:url(images/prev.png) center center no-repeat;}
+.flex-direction-nav li a.flex-next{right:40px;background:url(images/next.png) center center no-repeat;}
+*/
+</style>	
+#end
+#define($js)
+
+<script type="text/javascript" src="../js/slideshow_buttontitle.js"></script>
+<script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$("#slideshow1").slideshow_buttontitle({
+		time_interval: '3000', 
+		window_background_color: "#FFF",
+		window_padding: '1',
+		window_width: '312',
+		window_height: '312',
+		border_size: '1',
+		border_color: 'rgba(34, 30, 30, 0.17)',
+		title_text_color: 'white',
+		title_background_color: '#42AEC2',
+		button_color: '#84C5D2',
+		button_current_color: '#2C7E8F',
+		button_size: '12'
+	});
+	$('.publicize_l').flexslider({
+		directionNav: true,
+		pauseOnAction: false
+	});
+
+
+	});
+</script>
+#end
+	   <div class="container">
+			<div class="publicize">
+				<div class="publicize_l">
+					<ul class="slides">
+						<li style="background:url(../images/publicize_1.png) 50% 0 no-repeat;" alt="毕业宝"></li>
+						<li style="background:url(../images/publicize_2.jpg) 50% 0 no-repeat;"></li>
+						<li style="background:url(../images/publicize_3.jpg) 50% 0 no-repeat;"></li>
+					</ul>
+				</div>
+    		<div class="publicize_r">
+    			<div class="publicize_content">
+    			<div class="title cf">
+				<h3 class="title_desc">站内动态</h3>
+				<a href="http://bbs.biyebao.cn/Rose4j-BBS/forums/show/17.page" target="_blank"  class="more">更多>></a>
+    			</div>
+    			<div class="notice">
+    				<p>热烈庆祝毕业宝网站成功上线，在此之际，本网站成品一律100一套</p>
+					<p>欲购从速，2015年成品将提价</p>
+    			</div>
+				#if($collectionTool.isNotEmpty($!{newsList}))
+    			<hr size="1" noshade="noshade"/>
+    			<ul>
+					#foreach($news in $!{newsList})
+					<li style="border-bottom:2px  dotted #ccc;">
+						<img src="../images/news_prefix.gif" style="display:inline-block">&nbsp;&nbsp;<a href="${news.getUrl()}" target="_blank">${news.getShowTitle()}</a></li>
+					#end
+    			</ul>
+				#end
+    			</div>
+    		</div>
+    	</div>
+    	<div class="main">
+    		<div class="main_top">
+    		<div class="top_l_side">
+    			<div class="publicize_content">
+    			<div class="title cf">
+				<h3 class="title_desc">联系我们</h3>
+				
+    			</div>
+				<div class="title_button">
+					<div  class="title_tip"> 
+					<a href="/process.html" target="_blank">
+					<img src="../images/chengpin.png" alt="成品区">
+						</a>
+					<a href="/booking/request.html" target="_blank">
+					<img src="../images/booking.png" alt="私人定做区">
+						</a>
+					</div>
+                </div>
+				<div class="contact_us">
+                    <ul>
+						<li>工作时间:9:00-23:00</li>
+						<li>客服热线：15050533840 </li>
+						<li>QQ：1841569470</li>
+						<li>邮箱:1841569470@qq.com</li>
+					</ul>
+				</div>
+				<div style="float:left;margin-top: -77px;margin-left: 209px;">
+				<embed src="../images/swf/phone.swf" width="40" height="40"></embed> 
+				</div>
+    		</div>
+    		</div>
+    		<div class="top_new_side">
+			<div class="publicize_content">
+    			<div class="title cf">
+				<h3 class="title_desc">最新推荐</h3>
+				<a href="#" class="more">更多>></a>
+    			</div>
+				#if($collectionTool.isNotEmpty($!{recommendProducts}))
+    			<ul>
+					#foreach($recommendProduct in $!{recommendProducts})
+					<li style="border-bottom:1px  dotted #ccc;"><img src="../images/news_prefix.gif" style="display:inline-block">&nbsp;&nbsp;<a href="/product/${recommendProduct.id}.html">$!{recommendProduct.name}</a></li>
+					#end
+				</ul>
+				#end
+    		</div>
+    		</div>
+    		 <div id="slideshow1" class="top_product_side">
+				<ul>
+					<li><a href="#" title="新生入学流程管理系统"><img src="../images/zhantai/JSP-01.jpg" alt="JSP-新生入学流程管理系统"/></a></li>
+					<li><a href="#" title="敬老院管理系统"><img src="../images/zhantai/JSP-02.jpg" alt="JSP-敬老院管理系统"/></a></li>
+					<li><a href="#" title="报刊订阅系统"><img src="../images/zhantai/JSP-03.jpg" alt="JSP-报刊订阅系统"/></a></li>
+					<li><a href="#" title="药店销售系统"><img src="../images/zhantai/JSP-04.jpg" alt="JSP-药店销售系统"/></a></li>
+				</ul>
+			<div class="slideshow_simple1_title"></div>
+			<ul class="slideshow_simple1_nav">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div style="clear: both"></div>
+		</div>
+			</div>
+			<div class="main_center">
+				<ul>
+					#foreach($productColumn in ${indexProducts})
+					<li>
+					<div class="product_list">
+								<div class="publicize_content">
+				    			<div class="title cf">
+								<h3 class="title_desc">$!{productColumn.titleDesc}</h3>
+								<a href="/column/$!{productColumn.title}.html" class="more">更多>></a>
+				    			</div>
+				    			<ul>
+				    			#if( $!{productColumn.contents})
+									
+    								#foreach($product in $!{productColumn.contents})
+                                        <li><span 
+											#if($velocityCount lt 4)
+											class="n"
+											#else
+											class="n n2"
+											#end
+											>$velocityCount</span>
+											<a href="/product/${product.id}.html">$!{product.name}</a><span class="date"> $date.format("MM-dd",$!{product.updateTime})</span>
+                                   
+										</li>
+    								#end
+								#end
+								</ul>
+		    					</div>
+					</div>
+					</li>
+					#end
+				</ul>
+			</div>
+			<div class="clr"></div>
+    	</div>
+    	</div> 

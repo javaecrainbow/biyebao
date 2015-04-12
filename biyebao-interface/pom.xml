@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.rose4j</groupId>
+    <artifactId>biyebao</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>biyebao-interface</artifactId>
+  <properties>
+  
+  </properties>
+  <build>
+          <finalName>${project.artifactId}-${project.version}</finalName>
+		<plugins>
+		<!-- 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions> 
+					<execution>
+						<id>copy-resources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<encoding>UTF-8</encoding>
+							<outputDirectory>${project.build.directory}/biyebao-interface-0.0.1-SNAPSHOT.jar</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/resources/f1</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				 
+				<executions>
+				
+					<execution>
+					<configuration>  
+				        <skip>true</skip>  
+				    </configuration>  
+						<id>jar-classes</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						
+					</execution>
+				</executions>
+			</plugin>
+			<!--
+			<plugin>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>copy-1</id>
+                    <phase>package</phase>
+                    <configuration>
+                        <tasks>
+                            <jar destfile="${project.build.directory}/biyebao-interface-${version}.jar" update="true">
+							    <fileset dir="src/main/resources/f1">
+							    <include name="*" />
+							    </fileset>
+							  </jar>
+                        </tasks>
+                    </configuration>
+                    <goals>
+                        <goal>run</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>copy-2</id>
+                    <phase>package</phase>
+                    <configuration>
+                        <tasks>
+                            <jar destfile="${project.build.directory}/biyebao-interface-${version}-2.jar" >
+							    <fileset dir="src/main/resources/f2">
+							    <include name="*" />
+							    </fileset>
+							  </jar>
+                        </tasks>
+                    </configuration>
+                    <goals>
+                        <goal>run</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+          -->
+		</plugins>
+	</build>
+</project>

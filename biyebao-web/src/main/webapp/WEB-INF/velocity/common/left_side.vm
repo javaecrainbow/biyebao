@@ -1,0 +1,26 @@
+            <div class="side">
+				<div class="item">
+                <h3 class="navigation_left">精品成品区</h3>
+               <ul>
+                <li>
+                    <a href="/column/JSP.html">JSP设计</a>
+                </li>
+                 <li>
+                    <a href="/column/ASP.html">ASP设计</a>
+                </li>
+                    <li>
+                    <a href="/column/PHP.html">PHP设计</a>
+                </li>
+				  <li>
+                    <a href="/column/VB.html">VB设计</a>
+                </li>
+				 <li>
+                    <a href="/column/VC.html">VC设计</a>
+                </li>
+                  <li>
+                    <a href="/column/Android.html">Android设计</a>
+                </li>
+               </ul>
+				</div>
+               #parse("common/left_contact.vm")
+            </div>

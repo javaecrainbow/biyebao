@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.rose4j</groupId>
+    <artifactId>biyebao</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.rose4j</groupId>
+  <artifactId>biyebao-web</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>biyebao-web Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+	  <dependency>
+	   <groupId>com.rose4j</groupId>
+  		<artifactId>biyebao-service</artifactId>
+  		
+	  </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    	<dependency>
+	  			<groupId>org.apache.velocity</groupId>
+	  			<artifactId>velocity</artifactId>
+	  		</dependency>
+	  		<dependency>
+	  			<groupId>org.apache.velocity</groupId>
+	  			<artifactId>velocity-tools</artifactId>
+	  		</dependency>
+	  		<dependency>
+	  			<groupId>org.springframework</groupId>
+	  			<artifactId>spring-webmvc</artifactId>
+	  		</dependency>
+	  		<dependency>
+	  			<groupId>commons-fileupload</groupId>
+	  			<artifactId>commons-fileupload</artifactId> 
+	  			<version>1.3.1</version>
+	  		</dependency>
+	  		<dependency>
+	  			<groupId>org.tuckey</groupId>
+	  			<artifactId>urlrewritefilter</artifactId>
+	  		</dependency>
+		  		<dependency>
+		  			<groupId>org.codehaus.jackson</groupId>
+		  			<artifactId>jackson-mapper-asl</artifactId>
+		  			<version>1.9.2</version>
+		  		</dependency>
+		<dependency>
+		  <groupId>com.googlecode.json-simple</groupId>
+		  <artifactId>json-simple</artifactId>
+		  <version>1.1.1</version>
+		</dependency>
+  </dependencies>
+  <build>
+    <finalName>biyebao-web</finalName>
+    <plugins>
+      <!-- 配置加入jetty服务器，开发时我们一般使用jetty服务器 -->  
+            <plugin> 
+                <groupId>org.mortbay.jetty</groupId>  
+                <artifactId>jetty-maven-plugin</artifactId>  
+                <configuration> 
+                    <!-- 设置扫描target/classes内部文件变化时间间隔 -->  
+                    <!-- <scanIntervalSeconds>10</scanIntervalSeconds> -->
+                    <webApp> 
+                        <contextPath>/</contextPath> 
+                    </webApp>
+                </configuration> 
+            </plugin> 
+    
+    </plugins>
+  </build>
+</project>

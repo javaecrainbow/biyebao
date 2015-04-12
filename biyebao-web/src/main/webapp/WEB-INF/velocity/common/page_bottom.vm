@@ -1,0 +1,23 @@
+#if($page && $page.totalPage>1)
+      #if($page.currentPage>1)
+        #set($prePage=${page.currentPage} - 1)
+        	<a href="$linkTool.getPageUrl($prePage,$page.pageUrl)" class="page-prev" rel="nofollow">上一页</a>
+        #end
+    	#foreach($i in [$page.start..$page.end])
+    		<a rel="nofollow" href="$linkTool.getPageUrl($i,$page.pageUrl)" 
+        		#if($i==$page.currentPage)
+        		class="current"
+        		#end
+        		>$i
+        	</a>
+		#end
+		
+		   #if($page.currentPage<$page.totalPage)
+            #set($nextPage=${page.currentPage} + 1)
+            	<a href="$linkTool.getPageUrl($nextPage,$page.pageUrl)" class="page-next" rel="nofollow">下一页</a>
+            #end
+	#end
+	
+	
+	
+	

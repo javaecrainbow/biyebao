@@ -1,0 +1,135 @@
+#set($title="定做申请失败--毕业宝|毕业神器|代做毕业设计-诚信100%包过 QQ:1841569470 代做毕设、计算机毕业设计")
+#define($meta)
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="定做申请失败|计算机毕业设计|jsp|asp|php毕业设计" />
+#end
+#define($css)
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<link rel="stylesheet" type="text/css" href="../css/booking.css">
+<link rel="stylesheet" type="text/css" href="../css/validation.css">
+<link rel="stylesheet" href="../js/kindeditor/themes/default/default.css" />
+#end
+#define($js)
+<script type="text/javascript" src="../js/Validform.js"></script>
+	<script charset="utf-8" src="../js/kindeditor/kindeditor.js"></script>
+	<script charset="utf-8" src="../js/kindeditor/lang/zh_CN.js"></script>
+#end
+       	<div class="list_content">
+    		<div class="list_navigation">我的位置：<a href="/">首页</a>》私人定制</div>
+            <div class="booking_content">
+            <div class="side">
+                <h3 class="navigation_left">精品成品区</h3>
+               <ul>
+                <li>
+                    <a href="/column/JSP.html">JSP设计</a>
+                </li>
+                 <li>
+                    <a href="/column/ASP.html">ASP设计</a>
+                </li>
+                    <li>
+                    <a href="/column/PHP.html">PHP设计</a>
+                </li>
+                  <li>
+                    <a href="/column/Android.html">Android设计</a>
+                </li>
+               </ul>
+               #parse("common/left_contact.vm")
+            </div>
+    		<div class="booking_r">
+            
+                <div class="booking_step">
+					<img src="../images/guide.jpg"/>
+				</div>
+                <div class="booking_form">
+					<form id="booking_form" action="../booking/apply.html" method="post">
+                   
+                    <h3 class="detail">毕业设计需求详情</h3>
+                    <div class="form_item">
+                    <label class="form_title"><em>*</em>题目</label>
+                    <div class="form_field text">
+                        <input type="text" name="title" class="input-text normal" maxlength="160" datatype="*" nullmsg="请填写论文题目！"/>
+                    </div>
+					<div class="Validform_checktip"></div>
+                    </div>
+                      <div class="form_item">
+                    <label class="form_title"><em>*</em>数据库</label>
+                        <select class="form_select" name="dbType">
+                            <option value="MYSQL">MYSQL</option>
+                            <option value="SQLSERVER">SQLSERVER</option>
+                            <option value="ORACLE">ORACLE</option>
+                            <option value="ACCESS">ACCESS</option>
+                        </select>
+                    </div>
+                    <div class="form_item">
+                    <label class="form_title"><em>*</em>语言</label>
+                        <select class="form_select" name="langType">
+                            <option value="JSP">JSP/JAVA</option>
+                            <option value="ASP">ASP.NET/C#</option>
+                            <option value="PHP">PHP</option>
+                            <option value="ANDROID">Android</option>
+                        </select>
+                    </div>
+                    <div class="form_item">
+                    <label class="form_title"><em>*</em>邮箱</label>
+                    <div class="form_field text">
+                        <input type="text" name="mail" class="input-text normal" maxlength="160" datatype="e" nullmsg="请填写邮箱方便资料发送！"/>
+                    </div>
+					<div class="Validform_checktip"></div>
+                </div>
+                     <div class="form_item">
+                    <label class="form_title"><em>*</em>联系电话</label>
+                    <div class="form_field text">
+                        <input type="text" name="telephone" class="input-text normal" maxlength="160" datatype="m" nullmsg="请输入您的联系电话方便保持联系！"/>
+                    </div>
+					<div class="Validform_checktip"></div>
+                </div>
+                <div class="form_item">
+                    <label class="form_title"><em>*</em>需求详情</label>
+                    <div class="form_field text">
+                        <textarea name="contents" style="width:500px;height:200px;visibility:hidden;" placeholder="需求详情" nullmsg="请认真填写需求详情方便我们确认！"></textarea>
+                    </div>
+					<div class="Validform_checktip"></div>
+                </div>
+                <div class="form_item">
+                    <label class="form_title">备注</label>
+                    <div class="form_field text">
+                        <textarea name="mark" class="input-text text_long" row="10" style="heigth:200px"></textarea>
+                    </div>
+					<div class="Validform_checktip"></div>
+                </div>
+					
+    		</div>
+    		   </div>
+                       <div class="clr"></div>
+                  <div class="button_area">
+                <button class="btn btn-main" type="submit">提交</button>
+            </div>
+			</form>
+            </div>
+        </div>
+			<script type="text/javascript">
+		KindEditor.ready(function(K){
+			var editor1 = K.create('textarea[name="contents"]', {
+				uploadJson : '../../kindeditor/upload_json.jsp',
+				fileManagerJson : '../../kindeditor/file_manager_json.jsp',
+				allowFileManager : true
+			});
+		});
+		$("#booking_form").Validform({
+		tiptype:2,
+		ajaxPost:true,
+		callback:function(data){
+			//返回数据data是json格式，{"info":"demo info","status":"y"}
+			//info: 输出提示信息;
+			//status: 返回提交数据的状态,是否提交成功。如可以用"y"表示提交成功，"n"表示提交失败，在ajax_post.php文件返回数据里自定字符，主要用在callback函数里根据该值执行相应的回调操作;
+			//你也可以在ajax_post.php文件返回更多信息在这里获取，进行相应操作；
+			
+			//这里执行回调操作;
+			if(data.status=="y"){
+				setTimeout(function(){
+					$.Hidemsg(); //公用方法关闭信息提示框;
+				},2000);
+			}
+		}
+	});
+			</script>

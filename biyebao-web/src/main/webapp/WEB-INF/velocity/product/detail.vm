@@ -1,0 +1,51 @@
+#set($title="$!{product.name}")
+#define($meta)
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="$!{product.name} 毕业宝|毕业神器|代做毕业设计-诚信100%包过 QQ:1841569470 代做毕设、计算机毕业设计" />
+<meta name="Keywords" content="$!{product.name} 计算机毕业设计 jsp asp php android 毕业设计 代做" />
+
+#end
+#define($css)
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<link rel="stylesheet" type="text/css" href="../css/detail.css">
+<link href="../css/slideshow_buttontitle.css" rel="stylesheet" type="text/css" />
+
+#end
+<div class="list_content">
+    		<div class="list_navigation">&nbsp;我的位置：<a href="/">首页</a>》<a href="/column/$!{productCloumn}.html">${productCloumn}设计</a>》$!{product.name}</div>
+    		<div class="detail_content_sub">
+    			<header>
+    				<div class="topic">
+
+    					<h2>$!{product.name}</h2> 
+    					<span class="key">
+    						<span class="time">$date.format("yyyy-MM-dd",$!{product.postTime})</span>
+    						<span>语言：$!{product.langType}
+    						<span class="where">来源：<a href="/">毕业宝计算机设计</a></span>
+    						<span class="read">浏览量：</span>
+    						<span class="count">$!{product.viewNum}</span>
+
+    						<span id="favorite"><a href="#">收藏</a></span>
+    					</span>
+    				</div>
+    			</header>
+    			<p>
+				$!{product.description}	
+				</p>
+    		</div>
+			#if($collectionTool.isNotEmpty($!{relatedProducts}))
+    		<div class="content_recommend">
+    			<div class="recommend_lasted">
+    				<h3>相关产品</h3>
+						<ul>
+    					#foreach($relatedProduct in $!{relatedProducts})
+    					<li><a href="/product/${relatedProduct.id}.html">$!{relatedProduct.name}</a></li>
+    					#end
+						</ul>
+
+    			</div>
+    		</div>
+			#end
+    		   </div>
+    		<div class="clr"></div>
+    	</div>

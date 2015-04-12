@@ -1,0 +1,91 @@
+#set($title="$!{productCloumn} 毕业设计 毕业宝,毕业神器,代做毕业设计-诚信100%包过 QQ:1841569470 代做毕设、计算机毕业设计")
+#define($meta)
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="计算机毕业设计 $!{productCloumn}毕业设计|代做" />
+<meta name="Keywords" content="毕业宝,毕业设计,代做，$!{productCloumn}" />
+#end
+#define($css)
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<link rel="stylesheet" type="text/css" href="../css/list.css">
+<link rel="stylesheet" type="text/css" href="../css/pagnation.css">
+
+<link href="../css/slideshow_buttontitle.css" rel="stylesheet" type="text/css" />
+#end
+   	<div class="list_content">
+    		<div class="list_navigation">&nbsp;我的位置：<a href="/">首页</a>》<a href="/column/$!{productCloumn}.html">$!{productCloumn}设计</a></div>
+    		<div class="list_content_sub">
+				#if($collectionTool.isNotEmpty($!{cloumnProducts}))
+    			<ul>
+					#foreach($product in $!{cloumnProducts})
+    				<li>
+    					<a class="title" href="/product/${product.id}.html">${product.name}</a>
+    					<span class="date">
+							#set($month=$date.getMonth($!{product.postTime})+1 )
+    						<div class="month">${month}月</div>
+    						<div class="day">$date.getDay($!{product.postTime})</div>
+    						<div class="year">$date.getYear($!{product.postTime})</div>
+    					</span>
+    					<p class="content">
+							#if($strTool.isNotEmpty($!{product.summary}))
+							$!{product.summary}
+							#else
+							$!{product.description}	
+							#end
+						</p>
+    				</li>
+					#end
+    			</ul>
+				#else
+					<div class="no_result">
+						<div class="tips">
+						对不起，没有找到你想要的题目$!{words}
+						</div>
+						<div class="suggest_booking">
+							<button class="btn btn-main" onclick="window.location.href='/booking/request.html'">私人定做</button>
+						</div>
+					</div>
+				#end
+    		</div>
+    		<div class="content_recommend">
+				#if($collectionTool.isNotEmpty($!{lastedProducts}))
+    			<div class="recommend_lasted">
+    				<h3>最新产品</h3>
+    				<ul>
+						#foreach($product in $!{lastedProducts})
+							<li><span 
+											#if($velocityCount lt 4)
+											class="n"
+											#else
+											class="n n2"
+											#end
+											>$velocityCount</span>
+											<a href="/product/${product.id}.html">$!{product.name}</a>
+						</li>
+						#end
+				    			</ul>
+    			</div>
+				#end
+				#if($collectionTool.isNotEmpty($!{hotProducts}))
+    			<div class="recommend_hot">
+					<h3>热门产品</h3>
+    				<ul>
+						#foreach($product in $!{hotProducts})
+						<li><span 
+											#if($velocityCount lt 4)
+											class="n"
+											#else
+											class="n n2"
+											#end
+											>$velocityCount</span>
+											<a href="/product/${product.id}.html">$!{product.name}</a>
+						</li>
+						#end
+				    	</ul>
+    			</div>
+				#end
+    		</div>
+    		<div class="clr"></div>
+    <div class="pagnation" id="pagnation">
+		#parse("common/page_bottom.vm")
+	</div>
+    </div>

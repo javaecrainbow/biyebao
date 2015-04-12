@@ -1,0 +1,62 @@
+
+<div class="header">
+	<div style="float:left">
+		<img src="../images/header_left.png">
+    </div>
+    	<div style="float:left;width:540px;margin-left:100px;">
+		<div style="margin-top: -14px;">
+			<form method="post" name="" action="/productsearch/search.html" target="_blank" style="margin:40px auto 0 auto;" onsubmit="return formCheck()">
+				<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt'">
+					<div class="radius" style="top:-2px;"></div>
+					<div class="radius" style="top:31px;"></div>
+		
+					<div class="searchMenu">
+			
+			<div class="searchSelected" id="searchSelected">选择</div>
+			
+			<div style="display:none;" class="searchTab" id="searchTab">
+				<div class="radius" style="top:259px;"></div>
+				<div class="radius" style="top:259px;left:59px;"></div>
+				<ul>
+					<li>选择</li>
+					<li class="">JSP</li>
+					<li>ASP</li>
+					<li>PHP</li>
+					<li>VB</li>
+					<li>VC</li>
+					<li>Android</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<input name="words" type="text" />
+		<input type="hidden" name="columnType"/>
+	</div>
+	
+	<div class="searchBtn">
+		<button id="searchBtn" type="submit" value="JSP"/>
+	</div>
+
+</form>
+
+        </div>
+		<div style="float:left;margin-top: 10px;margin-left: 117px;">热门搜索：</div>
+		</div>
+			<div class="clr"></div>
+</div>
+	<script type="text/javascript">
+function formCheck(){
+var text=$("input[name='words']").val();
+if($.trim(text)==""){
+		alert("请输入搜索词");
+		return false;
+	}
+	var reg = /^[\u4E00-\u9FA5]+$/; 
+	if(!reg.test(text)){ 
+		alert("请输入合法搜索词"); 
+		return false; 
+} 
+	return true;
+}
+</script>

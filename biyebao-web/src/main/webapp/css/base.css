@@ -1,0 +1,78 @@
+/* css reset www.admin10000.com */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; }
+img { display:block;border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;} 
+/* css common */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+
+body{font: 13px/1.5 Verdana,'Microsoft YaHei',Sans-Serif,Tahoma,Arial; word-wrap:break-word;}
+
+.n{background-color:#c00;color:#fff;height:16px;line-height:15px;left:2px;top:4px;padding:0 4px;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}
+ .n2{background-color:#777!important}.filter_item,.filter_item .lbl,.filter_item .lbl2,.filter_item .del{display:inline-block;*display:inline;*zoom:1}.filter_item{background-color:#fff;border:1px solid #bbb;padding:2px 18px 2px 9px;margin:3px 0;position:relative;height:13px;line-height:12px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;cursor:default;vertical-align:middle}
+ a:link, a:visited{color:#444;text-decoration:none;-webkit-transition:color .4s ease-in-out;-moz-transition:color .4s ease-in-out;-ms-transition:color .4s ease-in-out;-o-transition:color .4s ease-in-out;transition:color .4s ease-in-out;}
+a:hover{color:#f7c709}
+.no_result{
+	border:1px solid #ddd;
+	padding:5px 20px;
+	margin-bottom:40px;
+}
+.tips{
+	background: #dbe9ff;
+	padding:1em;
+	color:#ff850a;
+	font-size:14px;
+}
+.suggest_booking{
+	margin-top: 10px;
+}
+.btn{line-height:28px;height:28px;*line-height:16px;display:-moz-inline-stack;display:inline-block;vertical-align:middle;*vertical-align:auto;zoom:1;*display:inline;text-align:center;padding:0 15px;color:#333;overflow:visible;cursor:pointer;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7',endColorstr='#e6e6e6') chroma(color=black);text-shadow:1px 1px white;background-color:#f3f3f3;border:solid 1px #ccc;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;border-radius:2px;-webkit-box-shadow:inset 1px 1px rgba(255,255,255,0.3);-moz-box-shadow:inset 1px 1px rgba(255,255,255,0.3);box-shadow:inset 1px 1px rgba(255,255,255,0.3);background-image:-webkit-gradient(linear,50% 100%,50% 0,color-stop(0%,#e6e6e6),color-stop(100%,#f7f7f7));background-image:-webkit-linear-gradient(bottom,#e6e6e6,#f7f7f7);background-image:-moz-linear-gradient(bottom,#e6e6e6,#f7f7f7);background-image:-o-linear-gradient(bottom,#e6e6e6,#f7f7f7);background-image:linear-gradient(bottom,#e6e6e6,#f7f7f7)}
+.btn-main{
+color: #fff;
+background-color: #04a0be;
+background-image: -webkit-linear-gradient(bottom,#04a0be,#04a0be);
+border: 1px solid #04a0be;
+text-shadow:0 1px rgba(51,51,51,0.3);
+}
+.contact_us{
+	background: url("../images/contact.png") no-repeat;
+	height: 145px;
+	width: 350px;
+	margin: 5px 5px;
+}
+.contact_us ul{
+	padding-top: 50px;
+}
+.contact_us ul li{
+	font-family: “微软雅黑”;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fa8723;
+}
+.title_tip{
+	margin: 5px 0px;
+}
+.title_tip a{
+	display:inline-block;
+	margin-top: 5px;
+}
+.contact_left{
+	background: url("../images/contact_left.png") no-repeat;
+	height: 100px;
+	width: 150px;
+	margin: 5px 42px;
+}
+.phone_left li{
+	font-family: “微软雅黑”;
+	font-size: 8px;
+	font-weight: bold;
+	color: #fa8723;
+}

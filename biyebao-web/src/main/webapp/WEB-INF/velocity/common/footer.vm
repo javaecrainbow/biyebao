@@ -1,0 +1,9 @@
+	<ul class="my_link">
+			<li><a href="/column/JSP.html">JSP程序设计</a></li>
+			<li><a href="/column/ASP.html">ASP程序设计</a></li>
+			<li><a href="http://bbs.biyebao.cn/" target="_blank">毕业宝社区</a></li>
+			<li><a href="/about.html">联系我们</a></li>
+			<li><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254091567'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1254091567%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></li>
+	</ul>
+	<address>&copy;2013-<script>document.write(new Date().getFullYear());</script>
+	诚旭软件工作室 版权所有 <a href="www.biyebao.cn">www.biyebao.cn</a> 联系QQ：1841569470</address>

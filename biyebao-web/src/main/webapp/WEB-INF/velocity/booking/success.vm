@@ -1,0 +1,64 @@
+#set($title="定做申请成功--毕业宝|毕业神器|代做毕业设计-诚信100%包过 QQ:1841569470 代做毕设、计算机毕业设计")
+#define($meta)
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="定做申请成功|计算机毕业设计|jsp|asp|php毕业设计" />
+#end
+#define($css)
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+<style >
+	.tip{
+	height:120px;
+	margin:100px 100px;
+	float:left;
+	}
+	.help{
+	float:right;
+	margin-left:5px;
+	}
+	.tip span{
+	font-size:30px;
+	margin:-47px 0 0 69px;
+	display:block;
+	float:left;
+	}
+	.tip img{
+		height:50px;
+	}
+</style>
+#end
+    <div class="list_content">
+		 <div class="side">
+				<div class="item">
+                <h3 class="navigation_left">精品成品区</h3>
+               <ul>
+                <li>
+                    <a href="/column/JSP.html">JSP设计</a>
+                </li>
+                 <li>
+                    <a href="/column/ASP.html">ASP设计</a>
+                </li>
+                    <li>
+                    <a href="/column/PHP.html">PHP设计</a>
+                </li>
+                  <li>
+                    <a href="/column/Android.html">Android设计</a>
+                </li>
+               </ul>
+				</div>
+                #parse("common/left_contact.vm")
+            </div>
+		<div class="tip">
+			#if($status)
+			<img src="../images/success.png"/>
+			<span>恭喜你提交成功，请等待客服联系....</span>
+			#else
+			<img src="../images/fail.jpg"/>
+			<span>提交失败，请联系客服....</span>	
+			#end
+		</div>
+		                       <div class="clr"></div>
+
+    </div>
